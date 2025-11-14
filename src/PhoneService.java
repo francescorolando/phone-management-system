@@ -115,12 +115,7 @@ public class PhoneService {
     public boolean modificaProprietarioTelefono(Persona nuovoProprietario, int indice) {
         if (indice >= 0 && indice < this.numeroTelefoni && nuovoProprietario != null) {
             // controllo di non aver modificato un telefono di lavoro
-            if(this.telefoni[indice].modificaProprietario(nuovoProprietario)) {
-                return true;
-            }
-            else {
-                return false;
-            }
+          return this.telefoni[indice].modificaProprietario(nuovoProprietario);
         }
         else {
             return false;
@@ -278,3 +273,4 @@ public class PhoneService {
         this.indirizzo = indirizzo;
     }
 }
+
